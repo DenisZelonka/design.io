@@ -99,11 +99,11 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #2167AE 25%, #eb5952 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #2167AE 25%, #eb5952 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #2167AE 25%, #eb5952 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #2167AE 25%, #eb5952 85%);
+		background-color: #eb5952;
+		background-image: url("images/pozadie.png"), -moz-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
+		background-image: url("images/pozadie.png"), -webkit-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
+		background-image: url("images/pozadie.png"), -ms-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
+		background-image: url("images/pozadie.png"), linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2619,10 +2619,11 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+	float:left;
 	}
 
 		ul.icons li {
-			display: inline-block;
+			display: block;
 			padding: 0 0.65em 0 0;
 		}
 
@@ -2816,6 +2817,8 @@ input, select, textarea {
 		.features li {
 			width: calc(33.33333% - 2em);
 			margin-left: 2em;
+			margin-bottom: 2em;
+
 			margin-top: 3em;
 			padding: 0;
 		}
@@ -2827,6 +2830,21 @@ input, select, textarea {
 			.features li > :last-child {
 				margin-bottom: 0;
 			}
+
+		.features .image {
+			display: inline-block;
+			/* margin-left: 4em; */
+			padding: 0.8em;
+			border-radius: 100%;
+			/* border: solid 1px; */
+		}
+
+			.features .image img {
+				display: block;
+				border-radius: 100%;
+				width: 10em;
+			}
+
 
 		@media screen and (max-width: 980px) {
 
@@ -2991,7 +3009,7 @@ input, select, textarea {
 
 			.spotlight .content > :last-child {
 				margin-bottom: 0;
-			}
+			}	
 
 			.spotlight .content header.major {
 				margin: 0 0 2em 0;
@@ -3703,8 +3721,8 @@ input, select, textarea {
 		#footer .copyright {
 			width: 100%;
 			margin: 2.5em 0 2em 0;
-			font-size: 0.5em;
-			text-align: left;
+			font-size: 0.3em;
+			text-align:left;
 		}
 
 		@media screen and (max-width: 1280px) {
