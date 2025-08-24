@@ -104,6 +104,8 @@ input, select, textarea {
 		background-image: url("images/pozadie.png"), -webkit-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
 		background-image: url("images/pozadie.png"), -ms-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
 		background-image: url("images/pozadie.png"), linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
+		background-position: left;
+		background-size:105%;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2648,7 +2650,7 @@ input, select, textarea {
 			header.major h2:after {
 				display: block;
 				content: '';
-				width: 3.25em;
+				width:3.25em; /*  inherit*/
 				height: 2px;
 				margin: 0.7em 0 1em 0;
 				border-radius: 2px;
@@ -2674,7 +2676,7 @@ input, select, textarea {
 			}
 
 	footer.major {
-		margin-top: 3em;
+		margin-top: -3em;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -2811,6 +2813,7 @@ input, select, textarea {
 		width: calc(100% + 2em);
 		margin: 0 0 3em -2em;
 		padding: 0;
+		padding-bottom: 0;
 		list-style: none;
 	}
 
@@ -2834,9 +2837,11 @@ input, select, textarea {
 		.features .image {
 			display: inline-block;
 			/* margin-left: 4em; */
-			padding: 0.8em;
+			/* padding: 0.8em; */
+			padding-bottom: 0.8em;
 			border-radius: 100%;
 			/* border: solid 1px; */
+			/* border-color: #eb5952; */
 		}
 
 			.features .image img {
@@ -3015,12 +3020,21 @@ input, select, textarea {
 				margin: 0 0 2em 0;
 			}
 
+			.spotlight .content .actions {
+				padding-top: 1em;
+				-moz-justify-content: center;
+				-webkit-justify-content: center;
+				-ms-justify-content: center;
+				justify-content: center;
+				width: calc(100% + 1em);
+			}
+
 		.spotlight .image {
 			display: inline-block;
 			margin-left: 4em;
 			padding: 0.65em;
 			border-radius: 100%;
-			border: solid 1px;
+			/* border: solid 1px; */
 		}
 
 			.spotlight .image img {
@@ -3028,6 +3042,18 @@ input, select, textarea {
 				border-radius: 100%;
 				width: 16em;
 			}
+		
+		section.main:nth-of-type(even) .spotlight {
+			flex-direction: row-reverse;
+		}
+
+		section.main:nth-of-type(even) .spotlight .image {
+			margin-left: 0;
+			margin-right: 4em;
+			padding-right: 2em; /* Extra right padding for even sections */
+			padding-left: 0.65em; /* Reset left padding */
+		}
+
 
 		@media screen and (max-width: 980px) {
 
@@ -3067,6 +3093,14 @@ input, select, textarea {
 					flex: 0 1 auto;
 					margin-left: 0;
 					margin-bottom: 2em;
+				}
+
+				section.main:nth-of-type(even) .spotlight {
+					flex-direction: column-reverse !important;
+				}
+				section.main:nth-of-type(even) .spotlight .image {
+					margin-right: 0;
+					padding-right: 0.35em;
 				}
 
 		}
@@ -3123,7 +3157,7 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-			#header.alt .logo {
+			#header.alt .actions {
 				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
 				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
 				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
@@ -3134,6 +3168,8 @@ input, select, textarea {
 				transition-delay: 0s;
 				display: block;
 				margin: 0 0 1.5em 0;
+				/* position: relative; */
+				text-align: center;
 			}
 
 				#header.alt .logo img {
@@ -3405,7 +3441,9 @@ input, select, textarea {
 			#main input[type="button"]:hover,
 			#main button:hover,
 			#main .button:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(222, 222, 222, 0.25); /*235, 89,82, 0.5*/
+				background-blend-mode:saturation;
+			 /* rgba(222, 222, 222, 0.25) eb5952*/
 			}
 
 			#main input[type="submit"]:active,
@@ -3563,13 +3601,13 @@ input, select, textarea {
 		}
 
 		#main header.major h2:after {
-			background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-color: #dddddd; 
+			background-image: -moz-linear-gradient(90deg, #2167AE , #eb5952);
+			background-image: -webkit-linear-gradient(90deg, #2167AE, #eb5952);
+			background-image: -ms-linear-gradient(90deg, #2167AE, #eb5952);
+			background-image: linear-gradient(90deg, #2167AE, #eb5952);
 		}
-
+		 /* #2167AE 3%, #eb5952 100% */
 		#main table tbody tr {
 			border-color: #dddddd;
 		}
@@ -3602,6 +3640,7 @@ input, select, textarea {
 			padding: 5em 5em 3em 5em ;
 			border-top: solid 1px #dddddd;
 		}
+
 
 			#main > .main:first-child {
 				border-top: 0;
