@@ -2643,6 +2643,11 @@ input, select, textarea {
 		margin-bottom: 3em;
 	}
 
+		header.major h1 {
+			padding-bottom: 0;
+			margin-bottom: 0.15em;
+		}
+
 		header.major h2 {
 			font-size: 2em;
 		}
