@@ -2646,6 +2646,8 @@ input, select, textarea {
 	}
 
 		header.major h1 {
+			 font-size: 15em;
+
 			padding-bottom: 0;
 			margin-bottom: 0.15em;
 		}
@@ -3066,7 +3068,9 @@ input, select, textarea {
 			flex: 1;
 		}
 			.spotlight .content h1{
-				font-size: larger;
+				font-size: 2em;
+				font-weight: bolder;
+				margin-bottom: 0;
 			}
 
 			.spotlight .content h2{
