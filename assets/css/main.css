@@ -181,6 +181,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		text-align: justify;
 	}
 
 		p.content {
@@ -2822,6 +2823,14 @@ input, select, textarea {
 		list-style: none;
 	}
 
+		.features h2 {
+			margin-bottom: 0em;
+			font-weight: bold;
+			font-size: 1.25em;
+		}
+				
+
+
 		.features li {
 			width: calc(33.33333% - 2em);
 			margin-left: 2em;
@@ -3174,7 +3183,7 @@ input, select, textarea {
 	}
 
 		#header h1 {
-			margin: 0 0 0.25em 0;
+			margin: 0 0 0 0;
 		}
 
 		#header p {
@@ -3187,7 +3196,21 @@ input, select, textarea {
 		}
 
 			#header.alt h1 {
-				font-size: 3.25em;
+				font-size: 3.75em;
+				font-weight: bold;
+
+				margin-bottom: 0 !important;
+				padding-bottom: 0 !important;
+
+			}
+
+			#header.alt p {
+				/* font-size: 3.25em; */
+				text-align: center;
+				font-weight: bold;
+				color: #ffffff;
+				padding-top: 0 !important;
+				margin-top: 0 !important;
 			}
 
 			#header.alt > * {
@@ -3481,10 +3504,15 @@ input, select, textarea {
 			/* background-image: -moz-linear-gradient(45deg, #639DE0 , #eb5952); */
 			/* background-image: -webkit-linear-gradient(45deg, #639DE0, #eb5952); */
 			/* background-image: -ms-linear-gradient(45deg, #639DE0, #eb5952); */
-			background-image: linear-gradient(30deg, #639DE0, #70AAEC,#C860C4,#DAA5EA);
-			opacity: 85%;
-			box-shadow: inset 0 0 0 1px #dddddd;
+			background-image: linear-gradient(22.5deg, #70AAEC,#639DE0 ,#C860C4,#DAA5EA);
+			opacity: 100%;
+			box-shadow: inset 0 0 0 1px #eb5952;
 			color: #ffffff !important;
+			font-weight:bolder;
+			font-size:larger;
+			
+			/* font-size: large; */
+			
 		}
 
 		#main input[type="submit"],
