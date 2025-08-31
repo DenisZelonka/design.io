@@ -99,11 +99,11 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #eb5952;
-		background-image: url("images/pozadie.png"), -moz-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
-		background-image: url("images/pozadie.png"), -webkit-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
+		background-color: #eb5952 !important;
+		background-image: url("images/pozadie.png");/*, -moz-linear-gradient(45deg, #2167AE 3%, #eb5952 100%); */
+		/* background-image: url("images/pozadie.png"), -webkit-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
 		background-image: url("images/pozadie.png"), -ms-linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
-		background-image: url("images/pozadie.png"), linear-gradient(45deg, #2167AE 3%, #eb5952 100%);
+		background-image: url("images/pozadie.png"), linear-gradient(45deg, #2167AE 3%, #eb5952 100%); */
 		background-position: left;
 		background-size:105%;
 	}
@@ -2934,7 +2934,10 @@ input, select, textarea {
 		.dots-container {
 			text-align: center;
 			padding-top: 1rem;
-			display: none; /* Hidden by default, shown on mobile */
+			/* margin-right: 15rem; */
+			/* display: flex; */
+			display: none; 
+			/* Hidden by default, shown on mobile */
 		}
 
 		.dot {
@@ -2946,6 +2949,7 @@ input, select, textarea {
 			/* margin: 0 1rem 1rem 1rem; */
 			margin: auto;
 			margin-bottom: 2rem;
+			/* margin-right: 1rem; */
 
 			min-width: 0;
 			max-width: 0.1rem;
@@ -3348,22 +3352,22 @@ input, select, textarea {
 			}
 
 			#header.alt > * {
-				-moz-transition: opacity 3s ease;
-				-webkit-transition: opacity 3s ease;
-				-ms-transition: opacity 3s ease;
-				transition: opacity 3s ease;
-				-moz-transition-delay: 0.5s;
-				-webkit-transition-delay: 0.5s;
-				-ms-transition-delay: 0.5s;
-				transition-delay: 0.5s;
+				-moz-transition: opacity 2s ease;
+				-webkit-transition: opacity 2s ease;
+				-ms-transition: opacity 2s ease;
+				transition: opacity 2s ease;
+				-moz-transition-delay: 0s;
+				-webkit-transition-delay: 0s;
+				-ms-transition-delay: 0s;
+				transition-delay: 0s;
 				opacity: 1;
 			}
 
 			#header.alt .actions {
-				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
-				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
-				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
-				transition: opacity 1.25s ease, transform 0.5s ease;
+				-moz-transition: opacity 2s ease, -moz-transform 0.5s ease;
+				-webkit-transition: opacity 2s ease, -webkit-transform 0.5s ease;
+				-ms-transition: opacity 2s ease, -ms-transform 0.5s ease;
+				transition: opacity 2s ease, transform 0.5s ease;
 				-moz-transition-delay: 0s;
 				-webkit-transition-delay: 0s;
 				-ms-transition-delay: 0s;
@@ -3638,7 +3642,12 @@ input, select, textarea {
 			/* background-image: -moz-linear-gradient(45deg, #639DE0 , #eb5952); */
 			/* background-image: -webkit-linear-gradient(45deg, #639DE0, #eb5952); */
 			/* background-image: -ms-linear-gradient(45deg, #639DE0, #eb5952); */
-			background-image: linear-gradient(22.5deg, #70AAEC,#639DE0 ,#C860C4,#DAA5EA);
+			background-image: linear-gradient(22.5deg, 
+											#70AAEC ,
+											#639DE0 ,
+											#C860C4 ,
+											#DAA5EA);
+
 			opacity: 100%;
 			box-shadow: inset 0 0 0 1px #eb5952;
 			color: #ffffff !important;
@@ -3655,8 +3664,13 @@ input, select, textarea {
 		#main button,
 		#main .button {
 			background-color: #eb5952;
-			background-image: linear-gradient(22.5deg, #70AAEC,#639DE0 ,#C860C4,#DAA5EA);
-			 
+			background-image:linear-gradient(22.5deg, 
+											#70AAEC ,
+											#639DE0 ,
+											#C860C4 ,
+											#DAA5EA); 
+			
+			/* mask-size: 100% 50%; */
 			/* opacity: 85%; */
 			box-shadow: inset 0 0 0 1px #dddddd;
 			color: #ffffff !important;

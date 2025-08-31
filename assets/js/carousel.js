@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const test = document.querySelector(".main.special .dots-container").firstChild;
     test.style.backgroundColor="#333333";
+    test.style.opacity="75%";
+
+    test.disabled=true;
     
     for (let i = 1; i < totalItems; i++) {
         document.querySelector(".main.special .dots-container").appendChild(test.cloneNode(true));
@@ -34,11 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const dots = document.querySelectorAll('.main.special .dots-container .dot');
                dots.forEach((dot, i) => {
             if (i === index) {
-                dot.style.backgroundColor = "#000000";
+                dot.style.backgroundColor = "#333333";
                 dot.style.padding = "0.33rem";
+                dot.style.opacity="50%";
+
             } else {
                 dot.style.backgroundColor = "#333333";
                 dot.style.padding = "0.25rem";
+                dot.style.opacity="25%";
+
             }
         });
     }
@@ -52,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         featuresList.style.transition = 'transform 0.5s ease-in-out';
         if (direction === 'next') {
             currentIndex=currentIndex < totalItems -1 ? currentIndex+1 : 0;
-            
+
             globalDirection = 'next';
             featuresList.style.transform = `translateX(-${itemWidth}px)`;
             setTimeout(() => {
