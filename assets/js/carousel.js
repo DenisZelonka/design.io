@@ -15,12 +15,35 @@ document.addEventListener('DOMContentLoaded', () => {
         return 4
     };
     const visibleItems = getVisibleItems();
-    console.log('Visible Items:', visibleItems);
 
-    // Touch event variables
+
+
+    const test = document.querySelector(".main.special .dots-container").firstChild;
+    test.style.backgroundColor="#333333";
+    
+    for (let i = 1; i < totalItems; i++) {
+        document.querySelector(".main.special .dots-container").appendChild(test.cloneNode(true));
+    }
+
     let touchStartX = 0;
     let isTransitioning = false;
     let globalDirection = 'next';
+    let currentIndex = 0;
+
+    const updateDots = (index) => {
+        const dots = document.querySelectorAll('.main.special .dots-container .dot');
+               dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.style.backgroundColor = "#000000";
+                dot.style.padding = "0.33rem";
+            } else {
+                dot.style.backgroundColor = "#333333";
+                dot.style.padding = "0.25rem";
+            }
+        });
+    }
+
+    updateDots(currentIndex);
 
     const shiftItems = (direction) => {
         if (isTransitioning) return;
@@ -28,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemWidth = items[0].getBoundingClientRect().width;
         featuresList.style.transition = 'transform 0.5s ease-in-out';
         if (direction === 'next') {
+            currentIndex=currentIndex < totalItems -1 ? currentIndex+1 : 0;
+            
             globalDirection = 'next';
             featuresList.style.transform = `translateX(-${itemWidth}px)`;
             setTimeout(() => {
@@ -38,7 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 items = Array.from(featuresList.children);
                 isTransitioning = false;
             }, 500); // Wait for the transition to finish
+            updateDots(currentIndex);
         } else if (direction === 'prev') {
+            currentIndex=currentIndex > 0 ? currentIndex-1 : totalItems -1;
+
             globalDirection = 'prev';
             const lastItem = featuresList.lastElementChild;
             featuresList.prepend(lastItem);
@@ -50,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 items = Array.from(featuresList.children);
                 isTransitioning = false;
             }, 10); // Small delay to allow the new position to render
+            updateDots(currentIndex);
+
         }
     };
 
