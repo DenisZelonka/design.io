@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const test = document.querySelector(".main.special .dots-container").firstChild;
-    test.style.backgroundColor="#333333";
-    test.style.opacity="75%";
+    const firstDot = document.querySelector(".main.special .dots-container").firstChild;
+    firstDot.style.backgroundColor="#333333";
+    firstDot.style.opacity="75%";
 
-    test.disabled=true;
+    firstDot.disabled=true;
     
     for (let i = 1; i < totalItems; i++) {
-        document.querySelector(".main.special .dots-container").appendChild(test.cloneNode(true));
+        document.querySelector(".main.special .dots-container").appendChild(firstDot.cloneNode(true));
     }
 
     let touchStartX = 0;
@@ -138,13 +138,13 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', () => {
         stopAutoScroll();
         shiftItems('next');
-        setTimeout(startAutoScroll, 500);
+        // setTimeout(startAutoScroll, 500);
     });
 
     prevButton.addEventListener('click', () => {
         stopAutoScroll();
         shiftItems('prev');
-        setTimeout(startAutoScroll, 500);
+        // setTimeout(startAutoScroll, 500);
     });
 
     const carouselContainer = document.querySelector('.main.special .carousel-container');
