@@ -3100,6 +3100,8 @@ input, select, textarea {
 		
 		 .statistics .image {
 			display: inline-block;
+			border-radius:unset !important;
+
 			/* border-radius: 12px; */
 			width: 6em;
 			height: 6em;
