@@ -167,8 +167,8 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease, border-bottom 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		transition: color 0.2s ease, border-bottom 0.2s ease;
-		text-decoration: none;
-		border-bottom: dotted 1px;
+		text-decoration: none !important;
+		/* border-bottom: dotted 1px; */
 		color: inherit;
 	}
 
@@ -2372,6 +2372,7 @@ input, select, textarea {
 /* Image */
 
 	.image {
+		text-decoration: none;
 		border-radius: 8px;
 		border: 0;
 		display: inline-block;
@@ -2379,8 +2380,17 @@ input, select, textarea {
 	}
 
 		.image img {
+			text-decoration: none !important;
+			outline: None;
+			outline-width:0px;
+			border: 0;
+
 			border-radius: 8px;
 			display: block;
+		}
+
+		.image a img {
+			text-decoration: none !important;
 		}
 
 		.image.left, .image.right {
@@ -4278,6 +4288,7 @@ ol, li {
 		}
 
 			.contact .image img {
+
 				display: block;
 				border-radius: 100%;
 				width: 10em;
