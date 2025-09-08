@@ -228,6 +228,7 @@ input, select, textarea {
 	}
 
 	h4 {
+		margin-top: 1em;
 		font-size: 1.1em;
 	}
 
@@ -4360,7 +4361,6 @@ ol, li {
 #toTopBtn {
     position: fixed;
 	display: flex;
-	/* align-self:flex-start; */
     right: 1rem;
     bottom: 2em;
     z-index: 9999;
@@ -4373,7 +4373,7 @@ ol, li {
     width: .5rem !important;
     height: 1rem !important;
 	padding: 1rem 1rem 1rem 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 	align-items: center;
 	justify-content: center;
     cursor: pointer;
